@@ -35,5 +35,7 @@ export const unit = {
 };
 
 export const getDaysInMonth = (year: number, month: number): number => {
-    return new Date(year, month + 1, 0).getDate();
+    const realMonth = Number(month) + 1;
+    const date = new Date(year, realMonth, 0).getDate();
+    return date;
 };

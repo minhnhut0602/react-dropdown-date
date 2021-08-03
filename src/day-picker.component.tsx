@@ -24,9 +24,7 @@ export class DayPicker extends React.Component<IProps, IState> {
 
     renderDayOptions = () => {
         const { month, year, endYearGiven, optionClasses, defaultValue } = this.props;
-        console.log('nhut renderDayOptions month=', month)
         const daysInMonth = getDaysInMonth(year, month);
-        console.log('nhut renderDayOptions daysInMonth=', daysInMonth)
         let days = month ? daysInMonth : 31;
 
         const today = new Date();
